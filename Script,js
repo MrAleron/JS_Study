@@ -1,0 +1,13 @@
+"use strict";
+//This function takes the number of Fibonacci numbers and returns the sum of the Fibonacci numbers
+function FibonacciSum(n, currentNumber = 0, nextNumber = 1, sum = 0, step = 1) {
+    if (step > n) {
+        return sum;
+    }
+    
+    return FibonacciSum(n, nextNumber, currentNumber + nextNumber, sum + currentNumber, step + 1);
+}
+
+const n = 5;
+let sumOfTheFibonacciNumbers = FibonacciSum(n);
+console.log(`Сума перших ${n} чисел Фібоначчі: ${sumOfTheFibonacciNumbers}`);
